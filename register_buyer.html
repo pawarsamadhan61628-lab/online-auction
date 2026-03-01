@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Buyer Registration</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: url('https://images.unsplash.com/photo-1618005198919-2c7fefc8b6f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80') 
+        no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 20px 60px;
+      border-radius: 15px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+      width: 100%;
+      max-width: 400px;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #333;
+    }
+    .input-group {
+      position: relative;
+      margin-bottom: 25px;
+    }
+    .input-group input {
+      width: 100%;
+      padding: 12px 40px 12px 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      outline: none;
+      font-size: 16px;
+      background: rgba(255, 255, 255, 0.9);
+    }
+    .input-group label {
+      position: absolute;
+      top: -10px;
+      left: 12px;
+      font-size: 12px;
+      color: #2575fc;
+      background: #fff;
+      padding: 0 5px;
+    }
+    .input-group i {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #999;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      background: linear-gradient(45deg, #2575fc, #6a11cb);
+      border: none;
+      border-radius: 8px;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: linear-gradient(45deg, #6a11cb, #2575fc);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <form action="register_buyer.php" method="POST">
+      <h2>Buyer Registration</h2>
+
+      <div class="input-group">
+        <input type="text" name="name" id="name" required />
+        <label for="name">Full Name</label>
+        <i class="fa fa-user"></i>
+      </div>
+
+      <div class="input-group">
+        <input type="email" name="email" id="email" required />
+        <label for="email">Email</label>
+          <i class="fa fa-envelope"></i>
+        </div>
+
+        <div class="input-group">
+          <input type="password" name="password" id="password" required />
+          <label for="password">Password</label>
+          <i class="fa fa-lock"></i>
+        </div>
+
+        <div class="input-group">
+          <input type="text" name="phone" id="phone" required />
+          <label for="phone">Phone Number</label>
+          <i class="fa fa-phone"></i>
+        </div>
+
+        <button type="submit">Register</button>
+      </form>
+  </div>
+</body>
+</html>

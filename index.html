@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>View Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      padding: 30px;
+    }
+
+    
+
+    header h1 {
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .auth-links a {
+      color: white;
+      text-decoration: none;
+      margin-left: 15px;
+      font-weight: bold;
+    }
+
+    .main-banner {
+      background-color: #2196f3;
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+      position: relative;
+      border-radius: 6px;
+    }
+
+    .main-banner h2 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .main-banner p {
+      font-size: 18px;
+      margin-bottom: 25px;
+    }
+
+    .buttons a {
+      background-color: white;
+      color: #2196f3f;
+      padding: 10px 20px;
+      border-radius: 6px;
+      margin: 0 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .search-bar {
+      background-color: white;
+      margin: -25px auto 30px;
+      padding: 10px;
+      width: 82%;
+      max-width: 900px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .search-bar input, .search-bar select {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      flex: 1;
+    }
+
+    .search-bar button {
+      background-color: #2196f3;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .search-bar a{
+      background-color: #2196f3;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    
+.auction-container {
+      display: flex;
+      gap: 25px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .auction-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      width: 300px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .auction-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card-tags {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 10px;
+      position: absolute;
+      width: 90%;
+      top: 10px;
+    }
+
+    .tag {
+      background: #007bff;
+      color: #fff;
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-size: 12px;
+    }
+
+    .live-tag {
+      background: #28a745;
+      
+    }
+
+    .auction-content {
+      padding: 15px;
+    }
+
+    .auction-content h3 {
+      margin: 0;
+      font-size: 18px;
+    }
+
+    .auction-content p {
+      color: #666;
+      font-size: 14px;
+      margin: 5px 0 10px;
+    }
+
+    .bid-info {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .bid-info span {
+      font-weight: bold;
+      color: #28a745;
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 15px 15px;
+      font-size: 13px;
+      color: #555;
+    }
+
+    .bid-btn {
+      background: #007bff;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+      display: block;
+    }
+
+    .bid-btn:hover {
+      background: #0056b3;
+    }
+
+    .image-wrapper {
+      position: relative;
+    }
+
+  </style>
+</head>
+<body>
+
+
+  <section class="main-banner">
+    <h2>🔨 Live Auctions</h2>
+    <p>Discover amazing deals and unique items in our online marketplace</p>
+  </section>
+  <br>
+  <br>
+
+  <div class="search-bar">
+        <button>Search </button>
+      
+    <input type="text" placeholder="Search auctions by title or description...">
+    <select>
+      <option>All Categories</option>
+      <option>Electronics</option>
+      <option>Collectibles</option>
+      <option>Antiques</option>
+      <option>Art</option>
+      <option>Cars</option>
+      <option>Coins/Currency</option>
+    </select>
+    <a href="login.html"><button>Sell the Antiques </button></a>
+  </div>
+
+<h2><i class="fa-solid fa-table-cells"></i> Featured Auctions</h2>
+
+  <div class="auction-container">
+
+    <!-- Card 1 -->
+    <div class="auction-card">
+      <div class="image-wrapper">
+        <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29" alt="Handicraft">
+        <div class="card-tags">
+          <div class="tag">Handicrafts</div>
+          <div class="tag live-tag">Live</div>
+        </div>
+      </div>
+      <div class="auction-content">
+        <h3>Handicraft from Charminar</h3>
+        <p>Beautiful handcrafted decor from the heart of Hyderabad.</p>
+        <div class="bid-info">
+          <div>Current Bid: <span>₹650</span></div>
+          <div>Bids: 3</div>
+        </div>
+      </div>
+      <div class="footer">
+        <div><i class="fa-solid fa-user"></i> user1</div>
+        <div><i class="fa-regular fa-clock"></i> 1 day left</div>
+      </div>
+      <a href="login.html" class="bid-btn">View & Bid</a>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="auction-card">
+      <div class="image-wrapper">
+        <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470" alt="Silver Filigree Box">
+        <div class="card-tags">
+          <div class="tag">Handicrafts</div>
+        <div class="tag live-tag">Live</div>
+        </div>
+      </div>
+      <div class="auction-content">
+        <h3>Silver Filigree Box</h3>
+        <p>Exquisite filigree work from Karimnagar.</p>
+        <div class="bid-info">
+          <div>Current Bid: <span>₹4400</span></div>
+          <div>Bids: 2</div>
+        </div>
+      </div>
+      <div class="footer">
+        <div><i class="fa-solid fa-user"></i> user4</div>
+        <div><i class="fa-regular fa-clock"></i> 1 day left</div>
+      </div>
+      <a href="login.html" class="bid-btn">View & Bid</a>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="auction-card">
+      <div class="image-wrapper">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Cooking Set">
+        <div class="card-tags">
+          <div class="tag">Handicrafts</div>
+          <div class="tag live-tag">Live</div>
+        </div>
+      </div>
+      <div class="auction-content">
+        <h3>Hyderabadi Biryani Cooking Set</h3>
+        <p>Cookware set for authentic biryani.</p>
+        <div class="bid-info">
+          <div>Current Bid: <span>₹2800</span></div>
+          <div>Bids: 3</div>
+        </div>
+      </div>
+      <div class="footer">
+        <div><i class="fa-solid fa-user"></i> user3</div>
+        <div><i class="fa-regular fa-clock"></i> 1 day left</div>
+      </div>
+      <a href="login.html" class="bid-btn">View & Bid</a>
+    </div>
+
+  </div>
+
+</body>
+</html>
